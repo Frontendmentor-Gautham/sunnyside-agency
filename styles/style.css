@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/* font-family: 'Barlow', sans-serif */
+
+/* font-family: 'Fraunces', serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fraunces', sans-serif;
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header{
+    background-image: url('/images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.img-wrapper{
+    padding: 24px 16px;
+}
+
+.menu{
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .hamburger{
+    display: none;
+}
+
+nav .hamburger:focus{
+    outline: none;
+}
+
+.button{
+    width: 100px;
+    font-weight: 600;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+}
+
+@media screen and (max-width : 768px) {
+    nav .hamburger{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+
+    nav{
+        padding: inherit 0;
+    }
+
+    nav .hamburger{
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        padding-right: 10px;
+        padding-top: 24px;
+    }
+
+    nav .hamburger .close{
+        display: none;
+       
+    }
+
+    nav .hamburger.show .open{
+        display: none;
+    }
+    nav .hamburger.show .close{
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+    nav ul.show{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        padding-top: 10px;
+        margin: 0;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        z-index: 100;
+    }
+    nav ul li{
+        margin: 10px 10px;
+        text-align: right;
+    }
+
+}
