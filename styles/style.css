@@ -131,7 +131,12 @@ nav .hamburger:focus{
     margin-top: 10px;
 }
 
-.img{
+.content a:hover{
+    color: #000;
+    border-bottom: 4px solid hsl(51, 100%, 49%);
+}
+
+ .img{
     background-image: url('/images/desktop/image-transform.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,8 +147,8 @@ nav .hamburger:focus{
     background-image: url('/images/desktop/image-stand-out.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
-}
+    height: 500px;
+} 
 
 .img-column{
     height: 600px;
@@ -187,26 +192,26 @@ nav .hamburger:focus{
     padding-right: 70px;
 }
 
-.col-4{
+.col-md-4{
     text-align: center;
 }
-.col-4 img{
+.col-md-4 img{
     border-radius: 50%;
     width: 75px;
     height: 75px;
 }
 
-.col-4 p{
+.col-md-4 p{
     margin-top: 20px;
     font-family: inherit;
     font-weight: 500;
 }
 
-.col-4 ul{
+.col-md-4 ul{
     margin-top: 40px;
 }
 
-.col-4 ul li{
+.col-md-4 ul li{
     list-style-type: none;
 }
 
@@ -216,7 +221,7 @@ nav .hamburger:focus{
     font-weight: bold;
 }
 
-.col-4 ul li:last-child{
+.col-md-4 ul li:last-child{
     opacity: 0.8;
 }
 
@@ -229,9 +234,14 @@ nav .hamburger:focus{
     padding: 0;
 }
 
-.col-3{
+.col-md-3{
     padding: 0 !important;
 }
+
+.col-md-3 img:last-child{
+    display: none;
+}
+
 
 
 .footer{
@@ -264,6 +274,11 @@ nav .hamburger:focus{
     font-weight: 600;
 }
 
+.features li:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
 .social-icons{
     margin-top: 50px;
     display: flex;
@@ -275,8 +290,36 @@ nav .hamburger:focus{
     padding-right: 30px;
 }
 
+.social-icons li:hover{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+
+/* active states */
+.button:hover{
+    color: #fff;
+    opacity: 0.6;
+}
 
 @media screen and (max-width : 768px) {
+
+
+    header{
+        background-image: url('/images/mobile/image-header.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 550px;
+    }
+
+    header h1{
+        text-align: center;
+    }
+
+    .arrow-down{
+        margin-top: 70px;
+    }
     nav .hamburger{
         display: block;
     }
@@ -326,6 +369,56 @@ nav .hamburger:focus{
     nav ul li{
         margin: 10px 10px;
         text-align: right;
+    }
+
+    .img{
+        background-image: url('/images/mobile/image-transform.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .img2{
+        background-image: url('/images/mobile/image-stand-out.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+
+    .graphic-design{
+        background-image: url('/images/mobile/image-graphic-design.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 675px;
+    }
+    
+    .photography{
+        background-image: url('/images/mobile/image-photography.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 675px;
+    }
+
+    .img-column h5{
+        margin-top: 450px;
+    }
+
+    .img-column p{
+        margin-top: 40px;
+    }
+
+    .testimonials h2{
+        letter-spacing: 3px;
+        opacity: 0.5;
+    }
+
+    .col-md-3 img:last-child{
+        display: block;
+    }
+
+    .col-md-3 img:first-child{
+        display: none;
     }
 
 }
